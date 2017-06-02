@@ -1,0 +1,87 @@
+BoltDB
+6ta Meetup de Go en Buenos Aires
+1 Jun 2017
+
+Christian Kuroki
+ckuroki@gmail.com
+http://kombi.io
+
+* Sobre mi
+
+- Fullstack developer. Trabajo en Fullstack Labs, un software factory en Sacramento, California.
+
+- Experto en bases de datos, especialmente en PostgreSQL, donde fui contacto en Argentina entre 1998 y 2005.
+
+- Gopher desde hace 3 años
+
+- Empecé programando en C en 1992 en SCO Unix ... 
+
+- También hago Ruby, Javascript, Lua, Bash y mi propia cerveza
+
+* BoltDB
+
+- Base de datos CLAVE/VALOR
+
+- 100% Go
+
+- Embebida (no depende de un servicio)
+
+Instalación
+
+  $ go get github.com/boltdb/...
+
+
+* Funcionamiento
+  
+.image func1.png
+
+* Ejemplo: blog.db
+
+.image func2.png
+
+* Características
+
+- Transaccional 
+  Una transacción es atómica y puede implicar modificar varios buckets.
+  
+- Solo Una Transacción de escritura (RW) 
+
+- N Transacciones de lectura (RO) 
+
+
+* Abrir una base de datos (DB)
+
+.code abre.go
+
+* Crear o Actualizar valores
+
+.code crea.go
+
+* Recuperar valores - por clave
+
+.code lee.go
+
+* Recuperar valores - por rango
+
+.code leerango.go
+
+* Otras/os
+
+Otras prestaciones
+
+- Backups en linea
+- Busquedas por prefijo
+- Funciones de autoIncremento para generar claves numericas
+- Con gomobile, se puede usar embebida en Android o iOS
+
+Otros Datos 
+
+- Algunos usuarios "famosos": Heroku, Shopify
+
+- Ejemplo de API completo (con Labstack Echo) :
+
+.link http://github.com/ckuroki/blog_api.git http://github.com/ckuroki/blog_api.git
+
+
+
+
